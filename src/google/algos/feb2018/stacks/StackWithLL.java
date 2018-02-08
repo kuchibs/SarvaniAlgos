@@ -1,7 +1,7 @@
 package google.algos.feb2018.stacks;
 
 
-public class StackWithLL<T extends Comparable <T>> {
+public class StackWithLL<T extends Comparable<T>> {
 	
 	private Node<T> head;
 	private int count=0;
@@ -9,23 +9,23 @@ public class StackWithLL<T extends Comparable <T>> {
 	
 	public void push (T data){
 		if(this.head == null){
-			this.head = new Node(data);
+			this.head = new Node<>(data);
 			
 		}else{
-			Node oldNode = this.head;
-			this.head = new Node (data);
+			Node<T> oldNode = this.head;
+			this.head = new Node<> (data);
 			this.head.setNextNode(oldNode);
 		}
 		count ++;
 	}
 	
 	
-	public Node pop (){
+	public T pop (){
 		
-		Node oldHead = this.head;
+		Node<T> oldHead = this.head;
 		this.head = this.head.getNextNode();
 		this.count--;
-		return oldHead;
+		return oldHead.getData();
 		
 	}
 	
