@@ -1,39 +1,38 @@
 package google.algos.feb2018.stacks;
 
-
-public class StackWithLL<T extends Comparable<T>> {
+public class StackWithLL<T extends Comparable<T>>{
 	
-	private Node<T> head;
-	private int count=0;
-
 	
-	public void push (T data){
-		if(this.head == null){
-			this.head = new Node<>(data);
-			
+	public Node<T> head;
+	public int count=0;
+	
+	public void push(T data){
+		
+		Node<T> newNode = new Node(data);
+		
+		if(head==null){
+			this.head = newNode;
 		}else{
-			Node<T> oldNode = this.head;
-			this.head = new Node<> (data);
-			this.head.setNextNode(oldNode);
+			Node<T> buf = this.head;
+			this.head = newNode;
+			this.head.setNextNode(buf);
 		}
-		count ++;
+		count++;
 	}
 	
-	
-	public T pop (){
+	public Node<T> pop(){
+		if(this.head==null){
+			return null;
+		}
 		
 		Node<T> oldHead = this.head;
 		this.head = this.head.getNextNode();
-		this.count--;
-		return oldHead.getData();
-		
+		count --;
+		return oldHead;
 	}
 	
 	public int size(){
 		return count;
 	}
 	
-	public boolean isEmpty(){
-		return this.head==null;
-	}
 }
