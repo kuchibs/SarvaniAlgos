@@ -22,4 +22,4 @@ function same(arr1, arr2){
 
 }
 
-console.log(same([2,4,76], [4,16,5776]));
+console.log(same([2,4,76], [4,16,5776])); //Time complexity = O(n)
