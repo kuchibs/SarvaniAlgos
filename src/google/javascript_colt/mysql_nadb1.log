@@ -1,0 +1,448 @@
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: The InnoDB memory heap is disabled
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: Compressed tables use zlib 1.2.7
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: Using Linux native AIO
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: Using SSE crc32 instructions
+2018-04-18  5:38:04 139959148558464 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2018-04-18  5:38:05 139959148558464 [Note] InnoDB: Completed initialization of buffer pool
+2018-04-18  5:38:05 139959148558464 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-04-18  5:38:08 139959148558464 [Note] InnoDB: 128 rollback segment(s) are active.
+2018-04-18  5:38:08 139959148558464 [Note] InnoDB: Waiting for purge to start
+2018-04-18  5:38:08 139959148558464 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.31-77.0 started; log sequence number 7389243700541
+2018-04-18  5:38:08 139959148558464 [Note] Plugin 'FEEDBACK' is disabled.
+2018-04-18  5:38:08 139958404773632 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2018-04-18  5:38:08 139959148558464 [Note] Server socket created on IP: '::'.
+2018-04-18  5:38:09 139959148558464 [Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--log-basename=#' or '--relay-log=devcloudnadb1-relay-bin' to avoid this problem.
+2018-04-18  5:38:09 139959148558464 [Note] Started replication for 'devcloudnadb1'
+2018-04-18  5:38:09 139959147911936 [ERROR] Master 'devcloudnadb1': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
+2018-04-18  5:38:09 139959147911936 [Note] Master 'devcloudnadb1': Slave I/O thread killed while connecting to master
+2018-04-18  5:38:09 139959147911936 [Note] Master 'devcloudnadb1': Slave I/O thread exiting, read up to log 'FIRST', position 4
+2018-04-18  5:38:09 139959147608832 [Note] Master 'devcloudnadb1': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log './devcloudnadb1-relay-bin-devcloudnadb1.000004' position: 4
+2018-04-18  5:38:09 139959148558464 [Note] Started replication for 'devcloudnadb2'
+2018-04-18  5:38:09 139959147911936 [ERROR] Master 'devcloudnadb2': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
+2018-04-18  5:38:09 139959147911936 [Note] Master 'devcloudnadb2': Slave I/O thread killed while connecting to master
+2018-04-18  5:38:09 139959147911936 [Note] Master 'devcloudnadb2': Slave I/O thread exiting, read up to log 'FIRST', position 4
+2018-04-18  5:38:09 139959147305728 [Note] Master 'devcloudnadb2': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log './devcloudnadb1-relay-bin-devcloudnadb2.000004' position: 4
+2018-04-18  5:38:09 139959148558464 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '10.1.17-MariaDB'  socket: '/database/mysql/mysql.sock'  port: 3306  MariaDB Server
+2018-04-18  5:38:09 139959147002624 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000001' at position 313, relay log './devcloudnadb1-relay-bin.000007' position: 537
+2018-04-18  5:38:17 139959147911936 [Note] Slave I/O thread: connected to master 'replica_user@devcloudnadb2:3306',replication started in log 'mysql-bin.000001' at position 313
+2018-07-17  1:38:40 139959072238336 [Warning] IP address '10.132.159.141' could not be resolved: Name or service not known
+2018-08-03 23:49:52 139959073147648 [Warning] IP address '10.160.1.196' could not be resolved: Name or service not known
+2018-08-03 23:49:52 139959072238336 [Warning] IP address '10.160.1.196' could not be resolved: Name or service not known
+InnoDB: Warning: a long semaphore wait:
+--Thread 139958429918976 has waited at buf0flu.cc line 1867 for 330.00 seconds the semaphore:
+Mutex at 0x7f4ac2487d30 '&buf_pool->flush_state_mutex', lock var 1
+Last time reserved by thread 139958497011456 in file not yet reserved line 0, waiters flag 1
+InnoDB: Warning: a long semaphore wait:
+--Thread 139959051246336 has waited at fil0fil.cc line 419 for 312.00 seconds the semaphore:
+Mutex at 0x7f4ac26351e8 '&fil_system->mutex', lock var 0
+Last time reserved by thread 18446744073709551615 in file not yet reserved line 0, waiters flag 0
+InnoDB: Warning: a long semaphore wait:
+--Thread 139958497011456 has waited at fil0fil.cc line 6248 for 312.00 seconds the semaphore:
+Mutex at 0x7f4ac26351e8 '&fil_system->mutex', lock var 0
+Last time reserved by thread 18446744073709551615 in file not yet reserved line 0, waiters flag 0
+InnoDB: Warning: semaphore wait:
+--Thread 139958429918976 has waited at buf0flu.cc line 1867 for 330.00 seconds the semaphore:
+Mutex at 0x7f4ac2487d30 '&buf_pool->flush_state_mutex', lock var 1
+Last time reserved by thread 139958497011456 in file not yet reserved line 0, waiters flag 1
+InnoDB: Warning: semaphore wait:
+--Thread 139959051246336 has waited at fil0fil.cc line 419 for 312.00 seconds the semaphore:
+Mutex at 0x7f4ac26351e8 '&fil_system->mutex', lock var 0
+Last time reserved by thread 18446744073709551615 in file not yet reserved line 0, waiters flag 0
+InnoDB: Warning: semaphore wait:
+--Thread 139958497011456 has waited at fil0fil.cc line 6248 for 312.00 seconds the semaphore:
+Mutex at 0x7f4ac26351e8 '&fil_system->mutex', lock var 0
+Last time reserved by thread 18446744073709551615 in file not yet reserved line 0, waiters flag 0
+InnoDB: ###### Starts InnoDB Monitor for 30 secs to print diagnostic info:
+InnoDB: Pending preads 1, pwrites 0
+
+=====================================
+2018-08-18 22:29:05 7f4a9d7fc700 INNODB MONITOR OUTPUT
+=====================================
+Per second averages calculated from the last 61 seconds
+-----------------
+BACKGROUND THREAD
+-----------------
+srv_master_thread loops: 3857394 srv_active, 0 srv_shutdown, 6435518 srv_idle
+srv_master_thread log flush and writes: 10292715
+----------
+SEMAPHORES
+----------
+OS WAIT ARRAY INFO: reservation count 97150530
+--Thread 139958429918976 has waited at buf0flu.cc line 1099 for 8.0000 seconds the semaphore:
+S-lock on RW-latch at 0x7f4aa732e220 '&block->lock'
+a writer (thread id 139959072541440) has reserved it in mode  exclusive
+number of readers 0, waiters flag 1, lock_word: 0
+Last time read locked in file trx0undo.ic line 191
+Last time write locked in file /home/buildbot/buildbot/build/mariadb-10.1.17/storage/xtradb/include/trx0undo.ic line 171
+Holder thread 0 file not yet reserved line 0
+OS WAIT ARRAY INFO: signal count 90837471
+Mutex spin waits 601197069, rounds 3817432186, OS waits 69252547
+RW-shared spins 63912499, rounds 1203248372, OS waits 23382506
+RW-excl spins 1135490, rounds 35620043, OS waits 920337
+Spin rounds per wait: 6.35 mutex, 18.83 RW-shared, 31.37 RW-excl
+------------------------
+LATEST DETECTED DEADLOCK
+------------------------
+2018-05-18 09:29:53 7f4ac2cd4b00
+*** (1) TRANSACTION:
+TRANSACTION 2395669267, ACTIVE 0 sec inserting
+mysql tables in use 1, locked 1
+LOCK WAIT 5 lock struct(s), heap size 1184, 4 row lock(s), undo log entries 2
+MySQL thread id 26, OS thread handle 0x7f4ac2c8ab00, query id 205161334 devcloudna.ca.com 10.162.2.7 oneadmin update
+REPLACE INTO group_pool (oid, name, body, uid, gid, owner_u, group_u, other_u) VALUES (182,'rnd_AgileOperations_IntLab','<GROUP><ID>182</ID><NAME>rnd_AgileOperations_IntLab</NAME><TEMPLATE><SUNSTONE><DEFAULT_VIEW><![CDATA[user]]></DEFAULT_VIEW><GROUP_ADMIN_DEFAULT_VIEW><![CDATA[admin]]></GROUP_ADMIN_DEFAULT_VIEW><GROUP_ADMIN_VIEWS><![CDATA[admin]]></GROUP_ADMIN_VIEWS><VIEWS><![CDATA[user]]></VIEWS></SUNSTONE></TEMPLATE><USERS><ID>296</ID><ID>2720</ID><ID>2983</ID><ID>3094</ID></USERS><ADMINS><ID>296</ID><ID>2720</ID><ID>2983</ID></ADMINS></GROUP>',0,182,1,1,0)
+*** (1) WAITING FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 50 page no 4 n bits 144 index `name` of table `opennebula`.`group_pool` trx table locks 1 total table locks 6  trx id 2395669267 lock_mode X waiting lock hold time 1 wait time before grant 0 
+*** (2) TRANSACTION:
+TRANSACTION 2395669270, ACTIVE 1 sec inserting
+mysql tables in use 1, locked 1
+4 lock struct(s), heap size 1184, 3 row lock(s), undo log entries 2
+MySQL thread id 32, OS thread handle 0x7f4ac2cd4b00, query id 205161337 devcloudna.ca.com 10.162.2.7 oneadmin update
+REPLACE INTO group_pool (oid, name, body, uid, gid, owner_u, group_u, other_u) VALUES (174,'rnd_AgileOperations_NFA','<GROUP><ID>174</ID><NAME>rnd_AgileOperations_NFA</NAME><TEMPLATE><SUNSTONE><DEFAULT_VIEW><![CDATA[user]]></DEFAULT_VIEW><GROUP_ADMIN_DEFAULT_VIEW><![CDATA[admin]]></GROUP_ADMIN_DEFAULT_VIEW><GROUP_ADMIN_VIEWS><![CDATA[admin,user]]></GROUP_ADMIN_VIEWS><VIEWS><![CDATA[user]]></VIEWS></SUNSTONE></TEMPLATE><USERS><ID>76</ID><ID>79</ID><ID>90</ID><ID>102</ID><ID>119</ID><ID>121</ID><ID>127</ID><ID>129</ID><ID>270</ID><ID>424</ID><ID>969</ID><ID>970</ID><ID>1002</ID><ID>1063</ID><ID>1179</ID><ID>1885</ID><ID>2117</ID><ID>2490</ID><ID>2494</ID><ID>2732</ID><ID>2773</ID><ID>2935</ID><ID>2982</ID><ID>2992</ID><ID>3094</ID><ID>3185</ID><ID>3214</ID><ID>3344</ID><ID>3356</ID><ID>3425</ID></USERS><ADMINS><ID>1885</ID><ID>2935</ID></ADMINS></GROUP>',0,174,1,1,0)
+*** (2) HOLDS THE LOCK(S):
+RECORD LOCKS space id 50 page no 4 n bits 144 index `name` of table `opennebula`.`group_pool` trx table locks 1 total table locks 6  trx id 2395669270 lock_mode X locks rec but not gap lock hold time 1 wait time before grant 0 
+*** (2) WAITING FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 50 page no 4 n bits 144 index `name` of table `opennebula`.`group_pool` trx table locks 1 total table locks 6  trx id 2395669270 lock_mode X waiting lock hold time 1 wait time before grant 0 
+*** WE ROLL BACK TRANSACTION (2)
+------------
+TRANSACTIONS
+------------
+Trx id counter 2902692207
+Purge done for trx's n:o < 2902692195 undo n:o < 0 state: running but idle
+History list length 268
+LIST OF TRANSACTIONS FOR EACH SESSION:
+---TRANSACTION 2849893195, not started
+InnoDB: ###### Diagnostic info printed to the standard error stream
+MySQL thread id 8, OS thread handle 0x7f4ac73d7b00, query id 575838419 Slave has read all relay log; waiting for the slave I/O thread to update it
+---TRANSACTION 2136260867, not started
+MySQL thread id 1, OS thread handle 0x7f4ac7549b00, query id 0 Waiting for background binlog tasks
+---TRANSACTION 2902692205, ACTIVE 350 sec fetching rows
+mysql tables in use 1, locked 1
+3 lock struct(s), heap size 1184, 6 row lock(s)
+MySQL thread id 708, OS thread handle 0x7f4ac1885b00, query id 618874049 devcloudna.ca.com 10.162.2.7 oneadmin updating
+DELETE FROM host_monitoring WHERE last_mon_time < 1534602188
+Trx #rec lock waits 3412 #table lock waits 0
+Trx total rec lock wait time 15810 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692204, ACTIVE (PREPARED) 351 sec
+mysql tables in use 1, locked 1
+2 lock struct(s), heap size 360, 1 row lock(s), undo log entries 1
+MySQL thread id 710, OS thread handle 0x7f4aafb1fb00, query id 618874048 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO document_pool (oid, name, body, type, uid, gid, owner_u, group_u, other_u) VALUES (8,'Windows 10 x64 Test 1','<DOCUMENT><ID>8</ID><UID>19</UID><GID>0</GID><UNAME>bluch02</UNAME><GNAME>oneadmin</GNAME><NAME>Windows 10 x64 Test 1</NAME><TYPE>100</TYPE><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LOCK><LOCKED>1</LOCKED><OWNER><![CDATA[]]></OWNER><EXPIRES>1534645506</EXPIRES></LOCK><TEMPLATE><BODY><![CDATA[{\"name\":\"Window
+Trx #rec lock waits 3421 #table lock waits 0
+Trx total rec lock wait time 15463 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692203, ACTIVE (PREPARED) 351 sec
+mysql tables in use 1, locked 1
+3 lock struct(s), heap size 1184, 2 row lock(s), undo log entries 1
+MySQL thread id 702, OS thread handle 0x7f4ac1919b00, query id 618874047 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO vm_pool (oid, name, body, uid, gid, last_poll, state, lcm_state, owner_u, group_u, other_u) VALUES (9211,'jesje01-F9211','<VM><ID>9211</ID><UID>377</UID><GID>165</GID><UNAME>jesje01</UNAME><GNAME>Support</GNAME><NAME>jesje01-F9211</NAME><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LAST_POLL>1534645369</LAST_POLL><STATE>3</STATE><LCM_STATE>3</LCM_STATE><PREV_STATE>3</PREV_STATE><PREV_LCM_STATE>3</PREV_LCM_STATE><RESCHED>0
+Trx #rec lock waits 3449 #table lock waits 0
+Trx total rec lock wait time 15476 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692202, ACTIVE (PREPARED) 351 sec
+mysql tables in use 1, locked 1
+2 lock struct(s), heap size 360, 1 row lock(s), undo log entries 1
+MySQL thread id 709, OS thread handle 0x7f4ac19f7b00, query id 618874046 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO vm_pool (oid, name, body, uid, gid, last_poll, state, lcm_state, owner_u, group_u, other_u) VALUES (2526,'kimka01-E2526','<VM><ID>2526</ID><UID>376</UID><GID>165</GID><UNAME>kimka01</UNAME><GNAME>Support</GNAME><NAME>kimka01-E2526</NAME><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LAST_POLL>1534645364</LAST_POLL><STATE>3</STATE><LCM_STATE>3</LCM_STATE><PREV_STATE>3</PREV_STATE><PREV_LCM_STATE>3</PREV_LCM_STATE><RESCHED>0
+Trx #rec lock waits 3354 #table lock waits 0
+Trx total rec lock wait time 15529 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692201, ACTIVE (PREPARED) 351 sec
+mysql tables in use 1, locked 1
+2 lock struct(s), heap size 360, 1 row lock(s), undo log entries 1
+MySQL thread id 706, OS thread handle 0x7f4aafbfdb00, query id 618874044 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO vm_pool (oid, name, body, uid, gid, last_poll, state, lcm_state, owner_u, group_u, other_u) VALUES (13278,'phish01-F13278','<VM><ID>13278</ID><UID>364</UID><GID>165</GID><UNAME>atcja01</UNAME><GNAME>Support</GNAME><NAME>phish01-F13278</NAME><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LAST_POLL>1534645372</LAST_POLL><STATE>3</STATE><LCM_STATE>3</LCM_STATE><PREV_STATE>3</PREV_STATE><PREV_LCM_STATE>3</PREV_LCM_STATE><RESCH
+Trx #rec lock waits 3455 #table lock waits 0
+Trx total rec lock wait time 15852 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692200, ACTIVE (PREPARED) 351 sec
+mysql tables in use 1, locked 1
+2 lock struct(s), heap size 360, 1 row lock(s), undo log entries 1
+MySQL thread id 703, OS thread handle 0x7f4ac18cfb00, query id 618874045 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO vm_pool (oid, name, body, uid, gid, last_poll, state, lcm_state, owner_u, group_u, other_u) VALUES (13130,'sanre01-U200943 - Elmsford_c02','<VM><ID>13130</ID><UID>827</UID><GID>165</GID><UNAME>sanre01</UNAME><GNAME>Support</GNAME><NAME>sanre01-U200943 - Elmsford_c02</NAME><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LAST_POLL>1534645372</LAST_POLL><STATE>3</STATE><LCM_STATE>3</LCM_STATE><PREV_STATE>3</PREV_STATE><PREV_LC
+Trx #rec lock waits 3423 #table lock waits 0
+Trx total rec lock wait time 15867 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692199, ACTIVE (PREPARED) 351 sec
+mysql tables in use 1, locked 1
+3 lock struct(s), heap size 1184, 2 row lock(s), undo log entries 1
+MySQL thread id 707, OS thread handle 0x7f4ac1963b00, query id 618874043 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO vm_pool (oid, name, body, uid, gid, last_poll, state, lcm_state, owner_u, group_u, other_u) VALUES (10550,'andja18-T10550','<VM><ID>10550</ID><UID>3017</UID><GID>1</GID><UNAME>andja18</UNAME><GNAME>users</GNAME><NAME>andja18-T10550</NAME><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LAST_POLL>1534645372</LAST_POLL><STATE>3</STATE><LCM_STATE>3</LCM_STATE><PREV_STATE>3</PREV_STATE><PREV_LCM_STATE>3</PREV_LCM_STATE><RESCHED>
+Trx #rec lock waits 3404 #table lock waits 0
+Trx total rec lock wait time 15933 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692198, ACTIVE (PREPARED) 351 sec
+mysql tables in use 1, locked 1
+2 lock struct(s), heap size 360, 1 row lock(s), undo log entries 1
+MySQL thread id 711, OS thread handle 0x7f4ac2d1eb00, query id 618874042 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO vm_pool (oid, name, body, uid, gid, last_poll, state, lcm_state, owner_u, group_u, other_u) VALUES (16185,'malzd01-T16185','<VM><ID>16185</ID><UID>3810</UID><GID>184</GID><UNAME>malzd01</UNAME><GNAME>Development</GNAME><NAME>malzd01-T16185</NAME><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LAST_POLL>1534645372</LAST_POLL><STATE>3</STATE><LCM_STATE>3</LCM_STATE><PREV_STATE>3</PREV_STATE><PREV_LCM_STATE>3</PREV_LCM_STATE><
+Trx #rec lock waits 3393 #table lock waits 0
+Trx total rec lock wait time 15469 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692197, ACTIVE 352 sec fetching rows
+mysql tables in use 1, locked 1
+360 lock struct(s), heap size 46632, 6515 row lock(s), undo log entries 13
+MySQL thread id 704, OS thread handle 0x7f4ac19adb00, query id 618874041 devcloudna.ca.com 10.162.2.7 oneadmin updating
+DELETE FROM vm_monitoring WHERE last_poll < 1534630991
+Trx #rec lock waits 3430 #table lock waits 0
+Trx total rec lock wait time 15613 SEC
+Trx total table lock wait time 0 SEC
+---TRANSACTION 2902692196, ACTIVE (PREPARED) 360 sec committing
+mysql tables in use 1, locked 1
+2 lock struct(s), heap size 360, 1 row lock(s), undo log entries 1
+MySQL thread id 705, OS thread handle 0x7f4ac2cd4b00, query id 618874040 devcloudna.ca.com 10.162.2.7 oneadmin query end
+REPLACE INTO vm_pool (oid, name, body, uid, gid, last_poll, state, lcm_state, owner_u, group_u, other_u) VALUES (14090,'upasa02-U172356 - Elmsford_c03','<VM><ID>14090</ID><UID>2558</UID><GID>143</GID><UNAME>upasa03</UNAME><GNAME>rnd_AgileOperations_SOI</GNAME><NAME>upasa02-U172356 - Elmsford_c03</NAME><PERMISSIONS><OWNER_U>1</OWNER_U><OWNER_M>1</OWNER_M><OWNER_A>0</OWNER_A><GROUP_U>0</GROUP_U><GROUP_M>0</GROUP_M><GROUP_A>0</GROUP_A><OTHER_U>0</OTHER_U><OTHER_M>0</OTHER_M><OTHER_A>0</OTHER_A></PERMISSIONS><LAST_POLL>1534645374</LAST_POLL><STATE>3</STATE><LCM_STATE>3</LCM_STATE><PREV_STATE>3</PR
+Trx #rec lock waits 3498 #table lock waits 0
+Trx total rec lock wait time 15805 SEC
+Trx total table lock wait time 0 SEC
+--------
+FILE I/O
+--------
+I/O thread 0 state: waiting for completed aio requests (insert buffer thread)
+I/O thread 1 state: waiting for completed aio requests (log thread)
+I/O thread 2 state: waiting for completed aio requests (read thread)
+I/O thread 3 state: waiting for completed aio requests (read thread)
+I/O thread 4 state: waiting for completed aio requests (read thread)
+I/O thread 5 state: waiting for completed aio requests (read thread)
+I/O thread 6 state: complete io for buf page (write thread)
+I/O thread 7 state: waiting for completed aio requests (write thread)
+I/O thread 8 state: waiting for completed aio requests (write thread)
+I/O thread 9 state: waiting for completed aio requests (write thread)
+Pending normal aio reads: 0 [0, 0, 0, 0] , aio writes: 0 [0, 0, 0, 0] ,
+ ibuf aio reads: 0, log i/o's: 0, sync i/o's: 0
+Pending flushes (fsync) log: 0; buffer pool: 2
+8863082782 OS file reads, 686078011 OS file writes, 260196247 OS fsyncs
+2 pending preads, 0 pending pwrites
+2.13 reads/s, 16384 avg bytes/read, 0.64 writes/s, 0.07 fsyncs/s
+-------------------------------------
+INSERT BUFFER AND ADAPTIVE HASH INDEX
+-------------------------------------
+Ibuf: size 1, free list len 0, seg size 2, 952 merges
+merged operations:
+ insert 0, delete mark 954, delete 1
+discarded operations:
+ insert 0, delete mark 0, delete 0
+0.00 hash searches/s, 0.00 non-hash searches/s
+---
+LOG
+---
+Log sequence number 8968135954175
+Log flushed up to   8968135954175
+Pages flushed up to 8968134635421
+Last checkpoint at  8968134339047
+Max checkpoint age    80826164
+Checkpoint age target 78300347
+Modified age          1318754
+Checkpoint age        1615128
+0 pending log writes, 0 pending chkp writes
+217027844 log i/o's done, 0.04 log i/o's/second
+----------------------
+BUFFER POOL AND MEMORY
+----------------------
+Total memory allocated 140771328; in additional pool allocated 0
+Total memory allocated by read views 2112
+Internal hash tables (constant factor + variable factor)
+    Adaptive hash index 2299488 	(2213368 + 86120)
+    Page hash           139112 (buffer pool 0 only)
+    Dictionary cache    840206 	(554768 + 285438)
+    File system         846320 	(812272 + 34048)
+    Lock system         385936 	(332872 + 53064)
+    Recovery system     0 	(0 + 0)
+Dictionary memory allocated 285438
+Buffer pool size        8191
+Buffer pool size, bytes 134201344
+Free buffers            697
+Database pages          7487
+Old database pages      2783
+Modified db pages       308
+Percent of dirty pages(LRU & free pages): 3.763
+Max dirty pages percent: 75.000
+Pending reads 2
+Pending writes: LRU 3, flush list 3, single page 0
+Pages made young 1149287264, not young 55776082531
+2.79 youngs/s, 93.69 non-youngs/s
+Pages read 8863696090, created 22650573, written 452677803
+11.71 reads/s, 0.00 creates/s, 0.58 writes/s
+Buffer pool hit rate 941 / 1000, young-making rate 14 / 1000 not 472 / 1000
+Pages read ahead 0.00/s, evicted without access 0.00/s, Random read ahead 0.00/s
+LRU len: 7487, unzip_LRU len: 0
+I/O sum[20720]:cur[4], unzip sum[0]:cur[0]
+--------------
+ROW OPERATIONS
+--------------
+0 queries inside InnoDB, 0 queries in queue
+2 read views open inside InnoDB
+9 RW transactions active inside InnoDB
+0 RO transactions active inside InnoDB
+9 out of 1000 descriptors used
+---OLDEST VIEW---
+Normal read view
+Read view low limit trx n:o 2902692208
+Read view up limit trx id 2902692197
+Read view low limit trx id 2902692208
+Read view individually stored trx ids:
+Read view trx id 2902692197
+Read view trx id 2902692198
+Read view trx id 2902692199
+Read view trx id 2902692200
+Read view trx id 2902692201
+Read view trx id 2902692202
+Read view trx id 2902692203
+Read view trx id 2902692204
+Read view trx id 2902692205
+-----------------
+Main thread process no. 46241, id 139958438311680, state: making checkpoint
+Number of rows inserted 72111975, updated 146956313, deleted 72202165, read 66107749823
+0.00 inserts/s, 0.00 updates/s, 0.16 deletes/s, 197.06 reads/s
+Number of system rows inserted 3, updated 0, deleted 3, read 4
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 0.00 reads/s
+----------------------------
+END OF INNODB MONITOR OUTPUT
+============================
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: The InnoDB memory heap is disabled
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Compressed tables use zlib 1.2.7
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Using Linux native AIO
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Using SSE crc32 instructions
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Completed initialization of buffer pool
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Log scan progressed past the checkpoint lsn 9048716217279
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Database was not shutdown normally!
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Starting crash recovery.
+2018-08-28 14:49:01 140662750840960 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2018-08-28 14:49:06 140662750840960 [Note] InnoDB: Restoring possible half-written data pages 
+2018-08-28 14:49:06 140662750840960 [Note] InnoDB: from the doublewrite buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 9048716217502
+2018-08-28 14:49:28 140662750840960 [Note] InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percent: 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+InnoDB: Last MySQL binlog file position 0 847977062, file name ./mysql-bin.002422
+2018-08-28 14:49:28 140662750840960 [Note] InnoDB: 128 rollback segment(s) are active.
+2018-08-28 14:49:28 140662750840960 [Note] InnoDB: Waiting for purge to start
+2018-08-28 14:49:28 140662750840960 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.31-77.0 started; log sequence number 9048716217502
+2018-08-28 14:49:28 140662007633664 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2018-08-28 14:49:28 140662750840960 [Note] Plugin 'FEEDBACK' is disabled.
+2018-08-28 14:49:30 140662750840960 [Note] Recovering after a crash using mysql-bin
+2018-08-28 14:51:43 140662750840960 [Note] Starting crash recovery...
+2018-08-28 14:51:43 140662750840960 [Note] Crash recovery finished.
+2018-08-28 14:51:43 140662750840960 [Note] Server socket created on IP: '::'.
+2018-08-28 14:51:43 140662750194432 [Note] /usr/sbin/mysqld: Normal shutdown
+
+2018-08-28 14:51:43 140662750840960 [ERROR] mysqld: Table './mysql/user' is marked as crashed and should be repaired
+2018-08-28 14:51:43 140662750840960 [Warning] Checking table:   './mysql/user'
+2018-08-28 14:51:43 140662750840960 [ERROR] mysql.user: 1 client is using or hasn't closed the table properly
+2018-08-28 14:51:44 140662750840960 [Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--log-basename=#' or '--relay-log=devcloudnadb1-relay-bin' to avoid this problem.
+2018-08-28 14:51:44 140662750840960 [Note] Started replication for 'devcloudnadb1'
+2018-08-28 14:51:44 140662749891328 [ERROR] Master 'devcloudnadb1': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
+2018-08-28 14:51:44 140662749891328 [Note] Master 'devcloudnadb1': Slave I/O thread killed while connecting to master
+2018-08-28 14:51:44 140662749891328 [Note] Master 'devcloudnadb1': Slave I/O thread exiting, read up to log 'FIRST', position 4
+2018-08-28 14:51:44 140662749588224 [Note] Master 'devcloudnadb1': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log './devcloudnadb1-relay-bin-devcloudnadb1.000005' position: 4
+2018-08-28 14:51:44 140662749588224 [Note] Master 'devcloudnadb1': Slave SQL thread exiting, replication stopped in log 'FIRST' at position 0
+2018-08-28 14:51:44 140662750840960 [Note] Started replication for 'devcloudnadb2'
+2018-08-28 14:51:44 140662749891328 [ERROR] Master 'devcloudnadb2': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
+2018-08-28 14:51:44 140662749891328 [Note] Master 'devcloudnadb2': Slave I/O thread killed while connecting to master
+2018-08-28 14:51:44 140662749891328 [Note] Master 'devcloudnadb2': Slave I/O thread exiting, read up to log 'FIRST', position 4
+2018-08-28 14:51:44 140662749285120 [Note] Master 'devcloudnadb2': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log './devcloudnadb1-relay-bin-devcloudnadb2.000005' position: 4
+2018-08-28 14:51:44 140662749285120 [Note] Master 'devcloudnadb2': Slave SQL thread exiting, replication stopped in log 'FIRST' at position 0
+2018-08-28 14:51:44 140662750840960 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '10.1.17-MariaDB'  socket: '/database/mysql/mysql.sock'  port: 3306  MariaDB Server
+2018-08-28 14:51:44 140662750194432 [Note] Event Scheduler: Purging the queue. 0 events
+2018-08-28 14:51:44 140662749891328 [Note] Slave I/O thread killed while connecting to master
+2018-08-28 14:51:44 140662749891328 [Note] Slave I/O thread exiting, read up to log 'mysql-bin.000001', position 875
+2018-08-28 14:51:44 140662675733248 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000001' at position 875, relay log './devcloudnadb1-relay-bin.000009' position: 1099
+2018-08-28 14:51:44 140662675733248 [Note] Slave SQL thread exiting, replication stopped in log 'mysql-bin.000001' at position 875
+2018-08-28 14:51:44 140661982492416 [Note] InnoDB: FTS optimize thread exiting.
+2018-08-28 14:51:44 140662750194432 [Note] InnoDB: Starting shutdown...
+2018-08-28 14:51:46 140662750194432 [Note] InnoDB: Shutdown completed; log sequence number 9048716219375
+2018-08-28 14:51:46 140662750194432 [Note] /usr/sbin/mysqld: Shutdown complete
+
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: The InnoDB memory heap is disabled
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Compressed tables use zlib 1.2.7
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Using Linux native AIO
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Using SSE crc32 instructions
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Completed initialization of buffer pool
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Highest supported file format is Barracuda.
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: 128 rollback segment(s) are active.
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB: Waiting for purge to start
+2018-08-28 14:54:25 139954802231424 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.31-77.0 started; log sequence number 9048716219375
+2018-08-28 14:54:25 139954059474688 [Note] InnoDB: Dumping buffer pool(s) not yet started
+2018-08-28 14:54:25 139954802231424 [Note] Plugin 'FEEDBACK' is disabled.
+2018-08-28 14:54:25 139954802231424 [Note] Server socket created on IP: '::'.
+2018-08-28 14:54:25 139954802231424 [Warning] Neither --relay-log nor --relay-log-index were used; so replication may break when this MySQL server acts as a slave and has his hostname changed!! Please use '--log-basename=#' or '--relay-log=devcloudnadb1-relay-bin' to avoid this problem.
+2018-08-28 14:54:25 139954802231424 [Note] Started replication for 'devcloudnadb1'
+2018-08-28 14:54:25 139954801584896 [ERROR] Master 'devcloudnadb1': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
+2018-08-28 14:54:25 139954801584896 [Note] Master 'devcloudnadb1': Slave I/O thread killed while connecting to master
+2018-08-28 14:54:25 139954801584896 [Note] Master 'devcloudnadb1': Slave I/O thread exiting, read up to log 'FIRST', position 4
+2018-08-28 14:54:25 139954801281792 [Note] Master 'devcloudnadb1': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log './devcloudnadb1-relay-bin-devcloudnadb1.000005' position: 4
+2018-08-28 14:54:25 139954802231424 [Note] Started replication for 'devcloudnadb2'
+2018-08-28 14:54:25 139954801584896 [ERROR] Master 'devcloudnadb2': Slave I/O: Fatal error: Invalid (empty) username when attempting to connect to the master server. Connection attempt terminated. Internal MariaDB error code: 1593
+2018-08-28 14:54:25 139954801584896 [Note] Master 'devcloudnadb2': Slave I/O thread killed while connecting to master
+2018-08-28 14:54:25 139954801584896 [Note] Master 'devcloudnadb2': Slave I/O thread exiting, read up to log 'FIRST', position 4
+2018-08-28 14:54:25 139954800978688 [Note] Master 'devcloudnadb2': Slave SQL thread initialized, starting replication in log 'FIRST' at position 0, relay log './devcloudnadb1-relay-bin-devcloudnadb2.000005' position: 4
+2018-08-28 14:54:25 139954802231424 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '10.1.17-MariaDB'  socket: '/database/mysql/mysql.sock'  port: 3306  MariaDB Server
+2018-08-28 14:54:25 139954800675584 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000001' at position 875, relay log './devcloudnadb1-relay-bin.000009' position: 1099
+2018-08-28 14:54:28 139954801584896 [ERROR] Slave I/O: error connecting to master 'replica_user@devcloudnadb2:3306' - retry-time: 60  retries: 86400  message: Can't connect to MySQL server on 'devcloudnadb2' (113 "No route to host"), Internal MariaDB error code: 2003
+2018-08-28 14:55:38 139954727123712 [Warning] IP address '10.132.159.141' could not be resolved: Name or service not known
+2018-08-28 15:03:49 139954801584896 [Note] Slave I/O thread: connected to master 'replica_user@devcloudnadb2:3306',replication started in log 'mysql-bin.000001' at position 875
+2018-08-28 15:39:35 139954800675584 [ERROR] Slave SQL: Could not execute Delete_rows_v1 event on table opennebula.host_monitoring; Can't find record in 'host_monitoring', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000002, end_log_pos 351078, Gtid 0-12-359646318, Internal MariaDB error code: 1032
+2018-08-28 15:39:35 139954800675584 [Warning] Slave: Can't find record in 'host_monitoring' Error_code: 1032
+2018-08-28 15:39:35 139954800675584 [ERROR] Error running query, slave SQL thread aborted. Fix the problem, and restart the slave SQL thread with "SLAVE START". We stopped at log 'mysql-bin.000002' position 4716
+2018-08-28 16:45:26 139954405776128 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000002' at position 4716, relay log './devcloudnadb1-relay-bin.000013' position: 5004
+2018-08-28 16:45:26 139954405776128 [ERROR] Slave SQL: Could not execute Delete_rows_v1 event on table opennebula.host_monitoring; Can't find record in 'host_monitoring', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000002, end_log_pos 351078, Gtid 0-12-359646318, Internal MariaDB error code: 1032
+2018-08-28 16:45:26 139954405776128 [Warning] Slave: Can't find record in 'host_monitoring' Error_code: 1032
+2018-08-28 16:45:26 139954405776128 [ERROR] Error running query, slave SQL thread aborted. Fix the problem, and restart the slave SQL thread with "SLAVE START". We stopped at log 'mysql-bin.000002' position 4716
+2018-08-29 12:34:04 139954801584896 [ERROR] Error reading packet from server: Lost connection to MySQL server during query ( server_errno=2013)
+2018-08-29 12:34:04 139954801584896 [Note] Slave I/O thread exiting, read up to log 'mysql-bin.000002', position 364284668
+2018-08-29 12:34:21 139954407291648 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000002' at position 4716, relay log './devcloudnadb1-relay-bin.000013' position: 5004
+2018-08-29 12:34:21 139954801584896 [Note] Slave I/O thread: connected to master 'replica_user@devcloudnadb2:3306',replication started in log 'mysql-bin.000002' at position 364284668
+2018-08-29 12:34:22 139954407291648 [Note] 'SQL_SLAVE_SKIP_COUNTER=1' executed at relay_log_file='./devcloudnadb1-relay-bin.000013', relay_log_pos='5004', master_log_name='mysql-bin.000002', master_log_pos='4716' and new position at relay_log_file='./devcloudnadb1-relay-bin.000013', relay_log_pos='73343068', master_log_name='mysql-bin.000002', master_log_pos='73342780' 
+2018-08-29 12:34:23 139954407291648 [ERROR] Slave SQL: Could not execute Delete_rows_v1 event on table opennebula.vm_monitoring; Can't find record in 'vm_monitoring', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000002, end_log_pos 76044892, Gtid 0-12-359646332, Internal MariaDB error code: 1032
+2018-08-29 12:34:23 139954407291648 [Warning] Slave: Can't find record in 'vm_monitoring' Error_code: 1032
+2018-08-29 12:34:23 139954407291648 [ERROR] Error running query, slave SQL thread aborted. Fix the problem, and restart the slave SQL thread with "SLAVE START". We stopped at log 'mysql-bin.000002' position 76044012
+2018-08-29 12:38:16 139954801584896 [ERROR] Error reading packet from server: could not find next log; the first event 'mysql-bin.000002' at 364284668, the last event read from 'mysql-bin.000002' at 249, the last byte read from 'mysql-bin.000002' at 364284668. ( server_errno=1236)
+2018-08-29 12:38:16 139954801584896 [ERROR] Slave I/O: Got fatal error 1236 from master when reading data from binary log: 'could not find next log; the first event 'mysql-bin.000002' at 364284668, the last event read from 'mysql-bin.000002' at 249, the last byte read from 'mysql-bin.000002' at 364284668.', Internal MariaDB error code: 1236
+2018-08-29 12:38:16 139954801584896 [Note] Slave I/O thread exiting, read up to log 'mysql-bin.000002', position 364284668
+2018-08-29 12:39:58 139954706553600 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000002' at position 76044012, relay log './devcloudnadb1-relay-bin.000013' position: 76044300
+2018-08-29 12:39:58 139954706553600 [ERROR] Slave SQL: Could not execute Delete_rows_v1 event on table opennebula.vm_monitoring; Can't find record in 'vm_monitoring', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000002, end_log_pos 76044892, Gtid 0-12-359646332, Internal MariaDB error code: 1032
+2018-08-29 12:39:58 139954706553600 [Warning] Slave: Can't find record in 'vm_monitoring' Error_code: 1032
+2018-08-29 12:39:58 139954706553600 [ERROR] Error running query, slave SQL thread aborted. Fix the problem, and restart the slave SQL thread with "SLAVE START". We stopped at log 'mysql-bin.000002' position 76044012
+2018-08-29 12:39:58 139954801584896 [Note] Slave I/O thread: connected to master 'replica_user@devcloudnadb2:3306',replication started in log 'mysql-bin.000002' at position 364284668
+2018-08-29 12:39:58 139954801584896 [ERROR] Error reading packet from server: Could not find first log file name in binary log index file ( server_errno=1236)
+2018-08-29 12:39:58 139954801584896 [ERROR] Slave I/O: Got fatal error 1236 from master when reading data from binary log: 'Could not find first log file name in binary log index file', Internal MariaDB error code: 1236
+2018-08-29 12:39:58 139954801584896 [Note] Slave I/O thread exiting, read up to log 'mysql-bin.000002', position 364284668
+2018-08-29 12:40:54 139954706553600 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000002' at position 76044012, relay log './devcloudnadb1-relay-bin.000013' position: 76044300
+2018-08-29 12:40:54 139954706553600 [ERROR] Slave SQL: Could not execute Delete_rows_v1 event on table opennebula.vm_monitoring; Can't find record in 'vm_monitoring', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000002, end_log_pos 76044892, Gtid 0-12-359646332, Internal MariaDB error code: 1032
+2018-08-29 12:40:54 139954706553600 [Warning] Slave: Can't find record in 'vm_monitoring' Error_code: 1032
+2018-08-29 12:40:54 139954706553600 [ERROR] Error running query, slave SQL thread aborted. Fix the problem, and restart the slave SQL thread with "SLAVE START". We stopped at log 'mysql-bin.000002' position 76044012
+2018-08-29 12:40:54 139954801584896 [Note] Slave I/O thread: connected to master 'replica_user@devcloudnadb2:3306',replication started in log 'mysql-bin.000002' at position 364284668
+2018-08-29 12:40:54 139954801584896 [ERROR] Error reading packet from server: Could not find first log file name in binary log index file ( server_errno=1236)
+2018-08-29 12:40:54 139954801584896 [ERROR] Slave I/O: Got fatal error 1236 from master when reading data from binary log: 'Could not find first log file name in binary log index file', Internal MariaDB error code: 1236
+2018-08-29 12:40:54 139954801584896 [Note] Slave I/O thread exiting, read up to log 'mysql-bin.000002', position 364284668
+2018-08-29 12:49:29 139954706553600 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000002' at position 76044012, relay log './devcloudnadb1-relay-bin.000013' position: 76044300
+2018-08-29 12:49:29 139954706553600 [ERROR] Slave SQL: Could not execute Delete_rows_v1 event on table opennebula.vm_monitoring; Can't find record in 'vm_monitoring', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000002, end_log_pos 76044892, Gtid 0-12-359646332, Internal MariaDB error code: 1032
+2018-08-29 12:49:29 139954706553600 [Warning] Slave: Can't find record in 'vm_monitoring' Error_code: 1032
+2018-08-29 12:49:29 139954706553600 [ERROR] Error running query, slave SQL thread aborted. Fix the problem, and restart the slave SQL thread with "SLAVE START". We stopped at log 'mysql-bin.000002' position 76044012
+2018-08-29 12:49:29 139954801584896 [Note] Slave I/O thread: connected to master 'replica_user@devcloudnadb2:3306',replication started in log 'mysql-bin.000002' at position 364284668
+2018-08-29 12:49:29 139954801584896 [ERROR] Error reading packet from server: Could not find first log file name in binary log index file ( server_errno=1236)
+2018-08-29 12:49:29 139954801584896 [ERROR] Slave I/O: Got fatal error 1236 from master when reading data from binary log: 'Could not find first log file name in binary log index file', Internal MariaDB error code: 1236
+2018-08-29 12:49:29 139954801584896 [Note] Slave I/O thread exiting, read up to log 'mysql-bin.000002', position 364284668
+2018-08-29 12:50:33 139954706553600 [Note] Slave SQL thread initialized, starting replication in log 'mysql-bin.000002' at position 76044012, relay log './devcloudnadb1-relay-bin.000013' position: 76044300
+2018-08-29 12:50:33 139954706553600 [ERROR] Slave SQL: Could not execute Delete_rows_v1 event on table opennebula.vm_monitoring; Can't find record in 'vm_monitoring', Error_code: 1032; handler error HA_ERR_KEY_NOT_FOUND; the event's master log mysql-bin.000002, end_log_pos 76044892, Gtid 0-12-359646332, Internal MariaDB error code: 1032
+2018-08-29 12:50:33 139954706553600 [Warning] Slave: Can't find record in 'vm_monitoring' Error_code: 1032
+2018-08-29 12:50:33 139954706553600 [ERROR] Error running query, slave SQL thread aborted. Fix the problem, and restart the slave SQL thread with "SLAVE START". We stopped at log 'mysql-bin.000002' position 76044012
+2018-08-29 12:50:33 139954801584896 [Note] Slave I/O thread: connected to master 'replica_user@devcloudnadb2:3306',replication started in log 'mysql-bin.000002' at position 364284668
+2018-08-29 12:50:33 139954801584896 [ERROR] Error reading packet from server: Could not find first log file name in binary log index file ( server_errno=1236)
+2018-08-29 12:50:33 139954801584896 [ERROR] Slave I/O: Got fatal error 1236 from master when reading data from binary log: 'Could not find first log file name in binary log index file', Internal MariaDB error code: 1236
+2018-08-29 12:50:33 139954801584896 [Note] Slave I/O thread exiting, read up to log 'mysql-bin.000002', position 364284668
